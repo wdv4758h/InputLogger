@@ -43,14 +43,10 @@ def main():
 
         ########################################
 
-        try:
-            e = MouseLoggingEvent()
-            e.capture = False
-            e.daemon = False
-            e.start()
-        except ImportError:
-            logging.info('{ "event": "exception", "type": "ImportError", "value": "Mouse events unsupported" }')
-            sys.exit()
+        e = MouseLoggingEvent()
+        e.capture = False
+        e.daemon = False
+        e.start()
 
         ########################################
         # Logging Screen Size
